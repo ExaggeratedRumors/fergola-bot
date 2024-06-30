@@ -6,7 +6,7 @@ This is template repository for Discord bots written in Kotlin language.
 ## Release
 
 `
-version 1.1
+version 1.0
 `
 
 ## Technologies
