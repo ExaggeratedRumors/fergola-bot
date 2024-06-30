@@ -1,5 +1,5 @@
 # Fergola Bot
-![](https://shields.io/badge/JDA-5.0-violet) ![](https://shields.io/badge/v1.1-purple)
+![](https://shields.io/badge/JDA-5.0-violet) ![](https://shields.io/badge/v1.0-purple)
 
 This is template repository for Discord bots written in Kotlin language.
 
