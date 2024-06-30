@@ -2,7 +2,7 @@ package com.ertools.commands
 
 import net.dv8tion.jda.api.entities.Message
 
-class Draw(
+class Help(
     call: String, requirePrefix: Boolean, requireAdmin: Boolean
 ): Command(
     call = call,
@@ -10,6 +10,7 @@ class Draw(
     requireAdmin = requireAdmin
 ) {
     override fun execute(message: Message) {
-        println("Draw execution success.")
+        println("Help execution success.")
     }
+
 }

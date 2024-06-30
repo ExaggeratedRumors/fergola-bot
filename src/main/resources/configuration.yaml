@@ -1,8 +1,0 @@
-properties:
-  prefix: !
-commands:
-  "Draw":
-    call: draw
-    enabled: true
-    prefix: true
-    admin: false

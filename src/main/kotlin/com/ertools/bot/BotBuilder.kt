@@ -26,22 +26,21 @@ class BotBuilder {
     }
 
     private fun registerCommands() {
-        registeredCommands = HashMap<String, Command>()
+        registeredCommands = HashMap()
         Configuration.commands.forEach { command ->
-            if(!command.enabled) return@forEach
-            val commandName = command.javaClass.simpleName
+            if(!command.value.enabled) return@forEach
+            val commandName = command.key
             try {
                 val clazz = Class.forName("com.ertools.commands.$commandName").kotlin
                 if(clazz.isAbstract) return@forEach
-                clazz.java.newInstance()
 
                 val constructor = clazz.primaryConstructor ?: return@forEach
                 val commandObject = constructor.call(
-                    command.call,
-                    command.prefix,
-                    command.admin
+                    command.value.call,
+                    command.value.reqPrefix,
+                    command.value.reqAdmin
                 )
-                registeredCommands[command.call] = commandObject as Command
+                registeredCommands[command.value.call] = commandObject as Command
             } catch (e: ClassNotFoundException) {
                 error("BotBuilder: Command $commandName does not exist.")
             }
