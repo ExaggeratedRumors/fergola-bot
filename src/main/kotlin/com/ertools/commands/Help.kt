@@ -12,5 +12,4 @@ class Help(
     override fun execute(message: Message) {
         println("Help execution success.")
     }
-
 }
